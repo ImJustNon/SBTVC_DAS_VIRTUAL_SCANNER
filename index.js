@@ -6,10 +6,10 @@ const key = "nonlnwza";
 function main() {
     const questions = [
         {
-            type: 'text',
+            type: 'passsword',
             name: 'barcodeData',
             message: 'Enter Barcode-Data',
-            // mask: '*'
+            mask: '*'
         }
     ]
 
