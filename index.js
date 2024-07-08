@@ -6,10 +6,9 @@ const key = "nonlnwza";
 function main() {
     const questions = [
         {
-            type: 'passsword',
+            type: 'password',
             name: 'barcodeData',
             message: 'Enter Barcode-Data',
-            mask: '*'
         }
     ]
 
@@ -18,7 +17,7 @@ function main() {
             // const parseToJson = JSON.parse(answers.qrData);
             const getFor_ = answers.barcodeData.startsWith("1") ? "in" : "out";
             const authID = answers.barcodeData.slice(1);
-            const response = await axios.post("http://127.0.0.1:808/api/auth/esp/auth_receiver", { 
+            const response = await axios.post("https://sbtvc-das-frontend-admin.vercel.app/api/auth/esp/auth_receiver", { 
                 secret_key: key, 
                 location_auth_id: authID, 
                 type: "home", 
